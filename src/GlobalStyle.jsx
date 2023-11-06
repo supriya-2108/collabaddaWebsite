@@ -54,8 +54,8 @@ h1 {
  h2 {
    color: ${({ theme }) => theme.colors.heading};
    font-size: 2rem;
-   margin-top:20px;
-   font-weight: 300;
+   margin:30px 0px;
+   font-weight: 700;
    display: flex;
     justify-content: center;
     align-items: center;
@@ -83,7 +83,18 @@ li {
   list-style: none;
 }
 
-
+.contentInWorkSection{
+  display:flex;
+  position:absolute;
+  top:80px;
+  color:#292e32;
+  font-weight:700;
+  font-size:1.175rem,
+  line-height:1;
+  background-color:rgba(255,255,255,.6);
+  width:98%;margin-left:-3px;
+  border-radius:10px;
+}
 ${"" /* resuable code section  */}
 
 .container {

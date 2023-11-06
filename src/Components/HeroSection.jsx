@@ -23,8 +23,7 @@ const HeroSection = () => {
           </div>
           <div className="hero-section-image">
             <figure>
-              <img
-                src="Images/hero-img.png"
+              <img src="Images/hero-img.png"
                 alt="hero-section-photo"
                 className="img-style"
               />

@@ -1,5 +1,4 @@
 import React from 'react'
-import { GlobalStyle } from '../GlobalStyle'
 import styled, { keyframes, css } from 'styled-components';
 const Brands = () => {
      const row1 = [
@@ -63,9 +62,9 @@ const Brands = () => {
 
 const AppContainer = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 70vh;
   color: #000000;
-  margin-top:-10rem;
+  margin-top:-3rem;
   position: relative;
   display: flex;
   align-items: center;
