@@ -84,58 +84,6 @@ li {
 }
 
 
-.slider{
-  height:250px;
-  margin:auto;
-  margin-top:20px;
-  position:relative;
-  width:90%;
-  display:grid;
-  place-item:center;
-  overflow:hidden;
-}
-
-.slide-track{
-  display:flex;
-  width:calc(250px*18);
-  animation: scroll 40s linear infinite;
-
-}
-
-@keyframes scroll{
-  0%{
-    transform:translateX(0);
-  }
-  100%{
-    transform:translateX(calc(-250px*9))
-  }
-}
-
-.slide{
-  height:200px;
-  width:250px;
-  display:flex;
-  align-item:center;
-  padding:15px;
-  perspective:100px;
-
-}
-
-img{
-  width:100%;
-  transition: transform 1s;
-}
-
-.slider::before,
-.slider::after{
-  background:linear-gradient(to right,rgba(255,255,255,1),0%,rgba(255,255,255,0) 100%);
-  content:'';
-  height:100%;
-  position:absolute;
-  width:15%;
-  z-index:2;
-}
-
 ${"" /* resuable code section  */}
 
 .container {
