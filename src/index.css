@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.logo{
+  color: #593C8F;
+ font-size: 25px;
+ font-family:'brittany-signature-regular';
+ font-weight: bold;
+ padding-left: 100px;
+ word-wrap: break-word;
+  height: 7rem;
+ }
