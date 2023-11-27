@@ -8,6 +8,12 @@ import ContactUs from './Pages/ContactUs'
 import SignIn from './Pages/SignIn'
 import Work from './Pages/Work'
 import About from './Pages/About'
+import Footer from './Components/Footer';
+import WhatsappButton from './Components/WhatsappButton';
+import Forms from './Pages/Forms';
+import Services from './Pages/Services';
+import CreatorForm from './Pages/CreatorForm';
+import ServicesPage from './Pages/ServicesPage.jsx';
 const App = () => {
 
   const theme = {
@@ -16,6 +22,7 @@ const App = () => {
       text: "rgba(29,29,29,0.8)",
       white: "#fff",
       black: "#212529",
+      darkGrey:'#292e32',
       helper: "#593C8F",
       bg: "#F6F8FA",
       footer_bg: "0a1435",
@@ -33,19 +40,24 @@ const App = () => {
       tab: "998px",
     },
   };
-
   return (
     <ThemeProvider theme={theme}>
     <Router>
       <GlobalStyle/>
       <Header/>
       <Routes>
-        <Route path="/" element= {<Home/>} />
-        <Route path="/about" element= {<About/>} />
+        <Route path="/" exact element= {<Home/>} />
+        <Route path="/forms" element= {<Forms/>} />
         <Route path="/work" element= {<Work/>} />
-        <Route path="/contactus" element= {<ContactUs/>} />
+        <Route path="/contactus" element= {<ContactUs/>} />       
+        <Route path="/about" element= {<About/>} />
         <Route path="/SignIn" element= {<SignIn/>} />
+        <Route path="/services" element= {<Services/>} />
+        <Route path="/servicesPage/:servicename" element= {<ServicesPage/>} />
+        <Route path="/creatorform" element= {<CreatorForm/>} />
       </Routes>
+      <WhatsappButton/>
+      <Footer/>
     </Router>
     </ThemeProvider> 
   )

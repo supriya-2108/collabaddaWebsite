@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import Navbar from './Navbar';
 import '../index.css'
-import HeroSection from './HeroSection';
 const Header = () => {
   return (
     <MainHeader>
@@ -17,16 +16,18 @@ const Header = () => {
 
 const MainHeader = styled.header` 
  padding-top:0;
- height: 5rem;
+ height: 6rem;
  background-color:${({theme})=>theme.colors.white};
  display:flex;
  justify-content: space-between;
  align-items: center;
- position: relative;
+ overflow-x:hidden !important;
 
 
 @media (max-width:${({theme})=>theme.media.mobile}) { 
-    .logo{
+  
+ overflow-x:hidden;  
+  .logo{
         font-size: 18px;
         padding-left: 1rem;
     }

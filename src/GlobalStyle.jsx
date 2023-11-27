@@ -6,23 +6,28 @@ export const GlobalStyle = createGlobalStyle`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Work Sans", sans-serif;
+  font-family: Georgia, Times, "Times New Roman", serif
+  overflow-x: hidden !important;
+
 
 html {
   font-size: 62.5%;
   /* scroll-behavior: smooth; */
   /* 1rem = 10px */
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+
 }
 
 body {
-  overflow-x: hidden;
-   scrollbar-color: rgb(98 84 243);
-    scrollbar-width: thin;
+  overflow-x: hidden !important;
+
+
 }
 
 body::-webkit-scrollbar {
   width: 1.5rem;
+  overflow-x: hidden !important;
+
 }
 
 body::-webkit-scrollbar-track {
@@ -37,18 +42,23 @@ body::-webkit-scrollbar-thumb {
     background-clip: content-box;
 }
 
+
 h1,
 h2,
 h3,
 h4 {
-   font-family: "Work Sans", sans-serif;
+  font-family: Georgia, Times, "Times New Roman", serif;
 
 }
 
 h1 {
   color: ${({ theme }) => theme.colors.heading};
-  font-size: 6rem;
-  font-weight: 900;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  line-height: 1.1;
+  padding-left:30px;
+  letter-spacing: -.05em;
 }
 
  h2 {
@@ -60,7 +70,6 @@ h1 {
     justify-content: center;
     align-items: center;
    white-space: normal;
-  
   }
 
 h3 {
@@ -68,12 +77,13 @@ h3 {
   font-weight: 400;
 }
 
-p, button {
-  color: ${({ theme }) => theme.colors.black};
+p{
+  color: ${({ theme }) => theme.colors.darkGrey}
   font-size: 1rem;
   line-height: 1.5;
   font-weight:400;
 }
+
 
 a {
   text-decoration: none;
@@ -89,12 +99,23 @@ li {
   top:80px;
   color:#292e32;
   font-weight:700;
-  font-size:1.175rem,
+  font-size:1rem,
   line-height:1;
-  background-color:rgba(255,255,255,.6);
-  width:98%;margin-left:-3px;
+  background-color:rgba(0,0,0,0.35) ;
+  width:98%;margin-left:-3rem;
   border-radius:10px;
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    margin-left:0px;
+    padding:0;
+    margin:0;
+  }
 }
+
+.innercontent{
+  display:flex;
+}
+
+
 ${"" /* resuable code section  */}
 
 .container {
@@ -105,6 +126,10 @@ ${"" /* resuable code section  */}
 .grid {
   display: grid;
   gap: 9rem;
+}
+.grid-1{
+  display:grid;
+  gap:0rem;
 }
 
 .grid--buttons {
@@ -122,7 +147,7 @@ ${"" /* resuable code section  */}
 }
 
 .grid-four-column{
-   grid-template-columns: 1fr 1.2fr .5fr .8fr ;
+   grid-template-columns: 1fr 1.2fr 0.4fr 0.8fr ;
 }
 
 .grid-five-column{
@@ -136,15 +161,6 @@ ${"" /* resuable code section  */}
       text-transform: capitalize;
     }
 
-     .intro-data {
-      color: black;
-      font-size: 34px;
-      font-family: 'Myanmar Khyay';
-      font-weight: 550;
-      word-spacing:5px;
-      word-wrap: break-word
-
-    }
 
    .caption {
       position: absolute;
@@ -190,7 +206,12 @@ input, textarea{
        html {
       font-size: 50%;
     }
-
+    p{
+      font-size:1.3rem;
+    }
+    .contentInWorkSection{
+      font-size:1.5rem;
+    }
 .grid{
   gap: 3.2rem;
 }
